@@ -1,33 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-off-black font-inter text-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.profile, .center_elt {
+  @apply flex justify-center items-center;
+}
+
+.img_wrapper {
+  @apply w-[88px] h-[88px] relative;
+}
+
+.profileImg {
+  @apply grid place-items-center; 
+}
+
+.card {
+  @apply bg-dark-grey w-fit p-10 rounded-[14px];
+}
+
+.name {
+  @apply font-bold text-white text-2xl mt-7 mb-2 text-center;
+}
+
+.location {
+  @apply text-primary-green font-bold text-base -tracking-[0.45px] text-center;
+}
+
+.bio {
+  @apply text-white text-sm -tracking-[0.42px] my-5;
+}
+
+.link_style {
+  @apply py-[14px] w-full rounded-lg bg-neutral-grey text-center text-white font-semibold text-sm;
+}
+
+.socials {
+  @apply flex flex-col gap-4;
+}
+
+.btn_navigation {
+  @apply py-[14px] px-5 rounded-lg text-center font-semibold text-sm text-black bg-white;
+}
+
+.Ice_Spice {
+  @apply py-[14px] px-5 rounded-lg text-center font-semibold text-sm text-black bg-white;
+}
+
+
+.active {
+  @apply bg-[#CCC] text-neutral-grey;
+}
+
+.unactive {
+  @apply bg-neutral-grey text-[#CCC];
+}
+
+.smooth_transition {
+  @apply transition-all ease-in-out duration-500;
+}
+
+.advice {
+  @apply font-bold text-[1.75rem] text-center tracking-[0.28px] text-white w-[503px] mt-9;
 }
